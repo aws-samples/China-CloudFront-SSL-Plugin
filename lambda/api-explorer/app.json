@@ -1,0 +1,145 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Management SSL API",
+    "description": "This API supports the management of SSL certificate.",
+    "contact": {
+      "url": "https://www.amazonaws.cn/contact-us",
+      "name": "Amazon Web Services Solutions"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": ""
+    }
+  ],
+  "tags": [
+    {
+      "name": "developers"
+    }
+  ],
+  "paths": {
+    "/list-ssl-cert": {
+      "get": {
+        "tags": [
+          "developers"
+        ],
+        "summary": "Ssl cert List from IAM",
+        "operationId": "list-ssl-cert",
+        "requestBody": {
+          "description": "SSL certification List"
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/listCertResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "invalid input, object invalid"
+          },
+          "500": {
+            "description": "Internal server error"
+          },
+          "502": {
+            "description": "Internal Server Error"
+          },
+          "504": {
+            "description": "Endpoint request timed out"
+          }
+        }
+      }
+    },
+    "/delete-ssl-cert": {
+      "post": {
+        "tags": [
+          "developers"
+        ],
+        "summary": "Delete ssl cert imported to IAM",
+        "operationId": "delete-ssl-cert",
+        "requestBody": {
+          "description": "Name of the SSL certificate to be deleted",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/deleteCertRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/deleteCertResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "invalid input, object invalid"
+          },
+          "500": {
+            "description": "Internal server error"
+          },
+          "502": {
+            "description": "Internal Server Error"
+          },
+          "504": {
+            "description": "Endpoint request timed out"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "deleteCertRequest": {
+        "required": [
+          "certName"
+        ],
+        "type": "object",
+        "properties": {
+          "certName": {
+            "type": "string",
+            "example": "MyExampleCert"
+          }
+        }
+      },
+      "deleteCertResponse": {
+        "type": "object",
+        "properties": {
+          "certName": {
+            "type": "string",
+            "example": "MyExampleCert"
+          },
+          "deletionResult": {
+            "type": "string",
+            "example": "Success"
+          }
+        }
+      },
+      "listCertResponse": {
+        "type": "object",
+        "properties": {
+          "certName": {
+            "type": "string",
+            "example": "MyExampleCert"
+          }
+        }
+      }
+    }
+  }
+}

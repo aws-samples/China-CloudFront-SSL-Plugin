@@ -1,0 +1,15 @@
+Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+**********************
+THIRD PARTY COMPONENTS
+**********************
+
+This software includes third party software subject to the following licenses.
+
+AWS CDK
+Apache-2.0 license
+https://github.com/aws/aws-cdk/blob/main/LICENSE
+
+certbot
+Apache-2.0 license & MIT License
+https://github.com/certbot/certbot/blob/master/LICENSE.txt
