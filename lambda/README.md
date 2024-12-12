@@ -7,7 +7,7 @@ This section contains Lambda code for China CloudFront SSL Plugin.
 | Directory                       | Description                                                                                        |
 |---------------------------------|----------------------------------------------------------------------------------------------------|
 | [api-explorer](./api-explorer/) | API Doc & API Explorer Code for IAM Certificate Management                                         |
-| [CertBot](./lambda/)            | Code for Let's Encrypt/Certbot certificate issuance/renew & CloudFront IAM certificate replacement |
+| [CertBot](./CertBot/)            | Code for Let's Encrypt/Certbot certificate issuance/renew & CloudFront IAM certificate replacement |
 | [ManageCert](./ManageCert/)     | Code for IAM Certificate Management                                                                |
 
 
