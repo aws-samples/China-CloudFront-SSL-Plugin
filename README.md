@@ -1,3 +1,16 @@
+# Note: We have already released [China-CloudFront-SSL-Plugin-V2](https://github.com/aws-samples/sample-China-CloudFront-SSL-Plugin-V2), if you need to experience the updated features, please click to enter.
+
+## The differences between China CloudFront SSL Plugin V2 and V1
+
+1. In China CloudFront SSL Plugin V1, each stack can only manage one project (i.e., one domain name collection). To manage multiple domain name collections, multiple stacks need to be deployed. In contrast, the stack of China CloudFront SSL Plugin V2 can manage multiple projects (i.e., multiple domain name collections).
+2. The certificate management interface of the first version of the China CloudFront SSL plugin is an API management page built on Swagger UI. To perform operations such as listing certificates or deleting certificates, you need to initiate API requests in the certificate management interface. In addition, in the first version, there is no security verification for externally used APIs.
+3. In China CloudFront SSL Plugin V1, each stack can only manage one project (i.e., one domain names collection). To manage multiple domain names collections, multiple stacks need to be deployed. In contrast, the stack of China CloudFront SSL Plugin V2 can manage multiple projects (i.e., multiple domain name collections).
+4. The certificate management interface of the first version of the China CloudFront SSL plugin is an API management page built on Swagger UI. To perform operations such as listing certificates or deleting certificates, you need to initiate API requests in the certificate management interface. In addition, in the first version, there is no security verification for externally used APIs.
+
+The China CloudFront SSL Plugin V2 provides a user-friendly graphical interface where users can perform operations by clicking buttons.
+
+The China CloudFront SSL V2 provides a security mechanism where you must first enter your Access Key in the frontend page before calling backend APIs. All operations require API key authentication.
+
 # China CloudFront SSL Plugin
 
 The China CloudFront SSL Plugin solution from Amazon Web Services in the China region helps you generate, update, and download free SSL/TLS certificates. It also supports integration with Amazon CloudFront and automates the process of updating associated SSL certificates. SSL utilizes data encryption, authentication, and message integrity verification mechanisms to ensure the security of data transmission over networks. This can help protect sensitive information on websites, such as personal identification and credit card details, guarding against theft by hackers.
